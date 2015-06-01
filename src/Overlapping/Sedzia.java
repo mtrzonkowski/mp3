@@ -11,7 +11,7 @@ import java.util.Date;
  *
  * @author mtrzonkowski
  */
-class Sedzia {
+public class Sedzia {
     
     private Date dataUzyskaniaUpr;
     private Osoba osoba;

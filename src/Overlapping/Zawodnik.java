@@ -11,10 +11,10 @@ import java.util.Date;
  *
  * @author mtrzonkowski
  */
-class Zawodnik {
-    public String callName;
-    public Date dataRejestracji;
-    public Osoba osoba;
+public class Zawodnik {
+    private String callName;
+    private Date dataRejestracji;
+    private Osoba osoba;
     
     
     public Zawodnik(Osoba osoba,String callName,Date dataRejestracji){
