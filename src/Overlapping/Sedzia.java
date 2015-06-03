@@ -12,25 +12,32 @@ import java.util.Date;
  * @author mtrzonkowski
  */
 public class Sedzia {
-    
+
     private Date dataUzyskaniaUpr;
     private Osoba osoba;
-    
-    public Sedzia(Osoba osoba,Date dataUzyskaniaUpr){
+
+    public Sedzia(Osoba osoba, Date dataUzyskaniaUpr) {
         this.setOsoba(osoba);
-        this.dataUzyskaniaUpr=dataUzyskaniaUpr;
-                
+        this.dataUzyskaniaUpr = dataUzyskaniaUpr;
+
     }
-        public void setOsoba(Osoba osoba) {
-        if(this.osoba!= osoba){
+
+    public void setOsoba(Osoba osoba) {
+        if (this.osoba != osoba) {
             if (this.osoba != null) {
                 this.osoba.setSedzia(null);
             }
             this.osoba = osoba;
-            if(osoba!=null){
+            if (osoba != null) {
                 osoba.setSedzia(this);
-            }    
+            }
         }
     }
     
+    public void destroySedzia(){
+        if(osoba!=null){
+            setOsoba(null);
+        }
+    }
+
 }
