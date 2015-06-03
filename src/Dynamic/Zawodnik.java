@@ -27,13 +27,13 @@ public class Zawodnik {
         this.dataPrzyjecia = dataPrzyjecia;
     }
     
-    public void setZawodnikType(Object podZawodnik) throws Exception{
+    public void setZawodnikType(PodZawodnik podZawodnik) throws Exception{
         if(podZawodnik.getClass().getInterfaces()!=PodZawodnik.class.getInterfaces()){
             throw new Exception("Ten obiekt nie może być zawodnikiem");
         }
         else{
             this.podZawodnik=podZawodnik;
-            podZawodnik.getClass().set
+            podZawodnik.setZawodnik(this);
         }
     }
     

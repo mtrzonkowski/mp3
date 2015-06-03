@@ -14,7 +14,8 @@ public class ZawodnikZwykly implements PodZawodnik{
     private String pozycja;
     private Zawodnik zawodnik;
 
-    public ZawodnikZwykly(String pozycja) {
+    public ZawodnikZwykly(Zawodnik zawodnik,String pozycja) throws Exception {
+        setZawodnik(zawodnik);
         this.pozycja = pozycja;
     }
 
