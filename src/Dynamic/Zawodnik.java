@@ -18,7 +18,7 @@ public class Zawodnik {
     private String druzyna;
     private Date dataPrzyjecia;
     
-    private Object podZawodnik;
+    private PodZawodnik podZawodnik;
 
     public Zawodnik(String imie, String nazwisko, String druzyna, Date dataPrzyjecia) {
         this.imie = imie;
@@ -28,12 +28,12 @@ public class Zawodnik {
     }
     
     public void setZawodnikType(Object podZawodnik) throws Exception{
-        if(podZawodnik.getClass()){
+        if(podZawodnik.getClass().getInterfaces()!=PodZawodnik.class.getInterfaces()){
             throw new Exception("Ten obiekt nie może być zawodnikiem");
         }
         else{
             this.podZawodnik=podZawodnik;
-            podZawodnik.
+            podZawodnik.getClass().set
         }
     }
     
